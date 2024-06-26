@@ -1,0 +1,37 @@
+output:
+  - platform: esp8266_pwm    
+    id: motor_forward_pin
+    pin: GPIO0
+  - platform: esp8266_pwm
+    id: motor_reverse_pin
+    pin: GPIO2
+
+fan:
+  - platform: hbridge
+    id: my_fan
+    name: "Motor"
+    pin_a: motor_forward_pin
+    pin_b: motor_reverse_pin
+    # enable_pin: motor_enable
+    decay_mode: slow
+
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 60s
+    
+  - platform: uptime
+    name:  "Upime"
+    
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+ 
+binary_sensor:
+  - platform: status
+    name: "Connect" 
+    
+button:
+  - platform: restart
+    name: "Restart"
