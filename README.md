@@ -12,4 +12,4 @@ Hardware:
 Configuration:
 - Add to ESPHome and use via HomeAssistant
 
-Connect the actuator arm to the controller, and connect the controllet to the ESP8266. If you removethe jumper in the middle of the controller you can power the ESP8266 from the same PSU (12V).
+Connect the actuator arm to the controller, and connect the controllet to the ESP8266. If you remove the jumper in the middle of the controller you can power the ESP8266 from the same PSU (12V).
